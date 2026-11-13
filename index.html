@@ -58,7 +58,7 @@ h2.title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3.6vw,
 .hero-photo .tag img { width: 30px; height: 30px; border: none; box-shadow: none; aspect-ratio: auto; object-fit: contain; }
 
 /* STATS */
-.stats { position: relative; margin: -56px 6vw 0; background: #fff; border: 1px solid #e0e4ef; box-shadow: 0 18px 40px rgba(26,58,107,0.10); display: grid; grid-template-columns: repeat(4, 1fr); }
+.stats { position: relative; margin: -56px 6vw 0; background: #fff; border: 1px solid #e0e4ef; box-shadow: 0 18px 40px rgba(26,58,107,0.10); display: grid; grid-template-columns: repeat(3, 1fr); }
 .stat { padding: 28px 28px; border-right: 1px solid #e0e4ef; }
 .stat:last-child { border-right: none; }
 .stat-num { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900; color: #1a3a6b; line-height: 1; }
@@ -135,16 +135,15 @@ footer { background: #1a3a6b; color: rgba(255,255,255,0.8); padding: 56px 6vw 32
 @media (max-width: 1000px) {
   .hero-inner { grid-template-columns: 1fr; padding: 64px 6vw 104px; gap: 44px; }
   .hero-photo .tag { left: 12px; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .stat:nth-child(2) { border-right: none; }
-  .stat:nth-child(-n+2) { border-bottom: 1px solid #e0e4ef; }
   .research-grid, .news-grid, .duo, .pi-band { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
   .nav-links { display: none; }
   .section { padding: 72px 6vw; }
-  .stat { padding: 20px; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { padding: 20px; border-right: none; border-bottom: 1px solid #e0e4ef; }
+  .stat:last-child { border-bottom: none; }
   .stat-num { font-size: 28px; }
   .r-card { grid-template-columns: 1fr; }
   .r-icon { padding: 18px; }
@@ -197,7 +196,6 @@ footer { background: #1a3a6b; color: rgba(255,255,255,0.8); padding: 56px 6vw 32
 <div class="stats">
   <div class="stat"><div class="stat-num">4<em>&times;</em></div><div class="stat-label">Active NIH R01 Grants</div></div>
   <div class="stat"><div class="stat-num">2018</div><div class="stat-label">First to link inflammasome to AF</div></div>
-  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Active research programs</div></div>
   <div class="stat"><div class="stat-num">AHA</div><div class="stat-label">Heart Association funded</div></div>
 </div>
 
